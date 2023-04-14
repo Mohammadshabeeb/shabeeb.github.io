@@ -1,0 +1,25 @@
+.container_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container_gallery article {
+    border: 1rem solid transparent;
+    transition: 5s;
+}
+.container_gallery article:hover{
+    border-color: var(--color-gray-500);
+}
+
+/* media query */
+
+@media screen and (max-width:1024px){
+    .container_gallery{grid-template-columns: 1fr 1fr;gap: 2rem;}
+    .container_gallery article {border:0}
+}
+
+
+@media screen and (max-width:600px){
+    .container_gallery{grid-template-columns: 1fr;gap: 1rem;}
+
+}
